@@ -1,5 +1,11 @@
 # Updates
-
+- V0.4.2
+  - 中文
+    - 增加`SCarousel`走马灯
+    - 增加`STimeLine`时间轴
+  - English
+    - Add `SCarousel`
+    - Add `STimeLine`
 - V0.4.1
   - 中文
     - 增加`SStep`进度指向线颜色效果

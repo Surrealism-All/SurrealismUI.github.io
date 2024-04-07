@@ -29,6 +29,8 @@
     - [STep](./components/data/step.md)
     - [SKeyBoard](./components/data/keyboard.md)
     - [SPagination](./components/data/pagination.md)
+    - [SCarousel](./components/data/carousel.md)
+    - [STimeline](./components/data/timeline.md)
   - [Form](./components/form/form.md)
     - [SInput](./components/form/input.md)
     - [SStar](./components/form/star.md)

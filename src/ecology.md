@@ -6,7 +6,7 @@
 |SurrealismUI|The Third Part Widgets Library for Slint|[Click Here](https://github.com/Surrealism-All/SurrealismUI)|
 |SurrealismUI Book|The Book of SurrealismUI|[Click Here](https://github.com/Surrealism-All/SurrealismUI.github.io)|
 |SurrealismUI Template|The Template of SurrealismUI + Slint|[Click Here](https://github.com/Surrealism-All/surrealism-ui-template)|
-|SurrealismUI Update Plugin|VSCode Plugin for SurrealismUI Update|🔧 not done|
+|SurrealismUI Update Plugin|VSCode Plugin for SurrealismUI Update|[Click Here](https://github.com/Surrealism-All/surrealism-ui-plugin)|
 
 ## Other learning materials
 

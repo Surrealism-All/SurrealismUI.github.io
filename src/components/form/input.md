@@ -1,6 +1,7 @@
 # SInput
 This is a basic input box, often used in forms, divided into two types: text and password
 
+![](../../static/input.png)
 ## examples
 
 ###

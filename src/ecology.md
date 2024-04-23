@@ -7,6 +7,7 @@
 |SurrealismUI Book|The Book of SurrealismUI|[Click Here](https://github.com/Surrealism-All/SurrealismUI.github.io)|
 |SurrealismUI Template|The Template of SurrealismUI + Slint|[Click Here](https://github.com/Surrealism-All/surrealism-ui-template)|
 |SurrealismUI Update Plugin|VSCode Plugin for SurrealismUI Update|[Click Here](https://github.com/Surrealism-All/surrealism-ui-plugin)|
+|Discord_SurrealismUI|Use SurrealismUI to make Discord as an example|[Click Here](https://github.com/Surrealism-All/Discord_SurrealismUI)|
 
 ## Other learning materials
 

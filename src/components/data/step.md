@@ -1,4 +1,4 @@
-# STep
+# SStep
 
 The Step component visualizes the progress of a sequence by breaking it down into individual steps. It allows for custom theming and supports indicating the current, completed, and pending steps through visual cues.
 

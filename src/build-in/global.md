@@ -20,6 +20,142 @@ Root Theme Styles
 - out property <ThemeShadow> sur-shadow : theme shadow
 - out property <ThemeSpace> sur-spacing : theme spacing
 
+### source code
+
+```rust
+export global ROOT_STYLES {
+  out property <FontProps> sur-font:{
+    font-family:"Arial",
+    font-weight:400,
+    font-size:16px,
+    font-italic:false,
+  };
+  in-out property <length> tag-size : 12px;
+  out property <brush> font-light : #ffffff;
+  out property <brush> font-black : #000;
+  in-out property <ThemeColor> sur-theme-colors : {
+    light:{name:"light",weakest:#F6F6F6,weaker:#E0E0E0,normal:#FFFFFF,deeper:#F5F5F5,deepest:#C8C8C6,font:#212121,opacity:#E0E0E088},
+    primary:{name:"primary",weakest:#88D0EC,weaker:#6CB8F7,normal:#3AA1F5,deeper:#1891F3,deepest:#0B86F1,font:#e5ffff,opacity:#3AA1F588},
+    success:{name:"success",weakest:#8FCEC4,weaker:#61BF84,normal:#38A762,deeper:#21964A,deepest:#118A3D,font:#e5fffb,opacity:#38A76288},
+    info:{name:"info",weakest:#F6F6F6,weaker:#eaeaea,normal:#E0E0E0,deeper:#D2D2D2,deepest:#BDBDBD,font:#484848,opacity:#E0E0E088},
+    warning:{name:"warning",weakest:#ffd5bd,weaker:#FCBD99,normal:#F9A677,deeper:#F9955C,deepest:#F8894A,font:#fff4ec,opacity:#F9A67788},
+    error:{name:"error",weakest:#e9a7a7,weaker:#f48989,normal:#ed5e5e,deeper:#ed4e4e,deepest:#ed3b3b,font:#ffe5e4,opacity:#ed4e4e88},
+    dark:{name:"dark",weakest:#707070,weaker:#616161,normal:#3a3a3a,deeper:#242424,deepest:#000000,font:#e4e4e4,opacity:#42424288}
+  };
+  in-out property <brush> radio-active : #FF9248;
+  out property <ThemePadding> sur-padding : {
+    none:{
+      padding-top:0,
+      padding-bottom:0,
+      padding-left:0,
+      padding-right:0,
+      padding-same:0
+    },
+    tag:{
+      padding-top:4px,
+      padding-bottom:4px,
+      padding-left:6px,
+      padding-right:6px,
+      padding-same:5px
+    },
+    icon:{
+      padding-top:2px,
+      padding-bottom:2px,
+      padding-left:2px,
+      padding-right:2px,
+      padding-same:2px
+    },
+    tip:{
+      padding-top:6px,
+      padding-bottom:6px,
+      padding-left:10px,
+      padding-right:10px,
+      padding-same:8px
+    },
+    small: {
+      padding-top:8px,
+      padding-bottom:8px,
+      padding-left:12px,
+      padding-right:12px,
+      padding-same:10px
+    },
+    normal:{
+      padding-top:10px,
+      padding-bottom:10px,
+      padding-left:16px,
+      padding-right:16px,
+      padding-same:14px
+    },
+    large:{
+      padding-top:16px,
+      padding-bottom:16px,
+      padding-left:24px,
+      padding-right:24px,
+      padding-same:20px
+    }
+  };
+  
+  out property <ThemeBorder> sur-border:{
+    none:{border-radius:0px,border-width:0px,border-color:ROOT-STYLES.sur-theme-colors.dark.normal},
+    small:{border-radius:2px,border-width:1px,border-color:ROOT-STYLES.sur-theme-colors.dark.normal},
+    normal:{border-radius:4px,border-width:2px,border-color:ROOT-STYLES.sur-theme-colors.dark.normal},
+    large:{border-radius:8px,border-width:4px,border-color:ROOT-STYLES.sur-theme-colors.dark.normal},
+    x-large:{border-radius:12px,border-width:6px,border-color:ROOT-STYLES.sur-theme-colors.dark.normal},
+    circle:{
+      none:{border-radius:1000in,border-width:0px,border-color:ROOT-STYLES.sur-theme-colors.dark.normal},
+      small:{border-radius:1000in,border-width:1px,border-color:ROOT-STYLES.sur-theme-colors.dark.normal},
+      normal:{border-radius:1000in,border-width:2px,border-color:ROOT-STYLES.sur-theme-colors.dark.normal},
+      large:{border-radius:1000in,border-width:4px,border-color:ROOT-STYLES.sur-theme-colors.dark.normal},
+      x-large:{border-radius:1000in,border-width:6px,border-color:ROOT-STYLES.sur-theme-colors.dark.normal},
+    }
+  };
+  out property <{
+    low:{shadow1:percent,shadow2:percent},
+    high:{shadow1:percent,shadow2:percent}
+  }> sur-opacity : {
+    low:{shadow1:28%,shadow2:14%},
+    high:{shadow1:28%,shadow2:20%}
+  };
+  out property <duration> sur-an-duration :200ms;
+  out property <easing> sur-an-easing : ease-in-out;
+  in-out property <SizeProps> sur-size:{
+    small:12px,
+    normal:16px,
+    large:24px,
+    largest:48px
+  };
+  out property <length> scroll-bar-width : 14px;
+  out property <ThemeShadow> sur-shadow:{
+    low1:{x:0,y:1px,blur:2px},
+    low2:{x:0,y:2px,blur:4px},
+    low3:{x:0,y:4px,blur:8px},
+    high1:{x:0,y:4px,blur:14px},
+    high2:{x:0,y:8px,blur:28px},
+    high-empty:{x:0,y:0px,blur:28px}
+  };
+  out property <ThemeSpace> sur-spacing:{
+    none:0,
+    len20:2px,
+    len40:4px,
+    len60:6px,
+    len80:8px,
+    len120:12px,
+    len160:16px,
+    len200:20px,
+    len240:24px,
+    len280:28px,
+    len320:32px,
+    len360:36px,
+    len400:40px,
+    len440:44px,
+    len480:48px,
+    len520:52px,
+    len560:56px,
+  };
+}
+
+```
+
 ## GlobalProps
 
 default global properties
@@ -35,630 +171,40 @@ default global properties
 - in-out property <bool> clip
 - in-out property <brush> active-color
 
-## DefaultSAlertProps
+### source code
 
 ```rust
-export global DefaultSAlertProps {
-  in-out property <int> font-weight : 700;
-  in-out property <length> font-size: GlobalProps.font.font-size;
-  in-out property <brush> color : GlobalProps.font.color;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  in-out property <TextOverflow> overflow : TextOverflow.elide;
-  in-out property <length> spacing : 16px;
-  in-out property <string> text : "this is a alert message!";
-  in-out property <bool> is-show : false;
-  in-out property <length> alert-height : font-size * 1.5;
-  in-out property <ResultType> result-type: ResultType.Success;
-  in-out property <image> close-icon : UseIcons.icons.Close-one;
-  in-out property <length> icon-size : 16px;
+export global GlobalProps {
+  /**global font style */
+  in-out property <FontProps> font : {
+    font-family : ROOT-STYLES.sur-font.font-family,
+    font-size : ROOT-STYLES.sur-font.font-size,
+    font-weight : ROOT-STYLES.sur-font.font-weight,
+    font-italic : ROOT-STYLES.sur-font.font-italic,
+    color : ROOT-STYLES.sur-theme-colors.dark.font
+  };
+  /**global theme */
+  in-out property <Themes> theme : Themes.Dark;
+  in-out property <TextActionProps> text-action : {
+    wrap : TextWrap.word-wrap,
+    overflow : TextOverflow.elide,
+    letter-spacing : 0,
+  };
+  in property <TextAlignmentProps> text-alignment : {
+    horizontal-alignment : TextHorizontalAlignment.left,
+    vertical-alignment : TextVerticalAlignment.center,
+  };
+  in-out property <length> line-height : ROOT-STYLES.sur-font.font-size * 1.5;
+  in-out property <length> standard-height : UseSurrealismFn.count-height(line-height,ROOT-STYLES.sur-padding.normal.padding-top);
+  in-out property <length> standard-width : UseSurrealismFn.count-width(ROOT-STYLES.sur-font.font-size,ROOT-STYLES.sur-padding.normal.padding-left);
+  in-out property <length> standard-icon-size : ROOT-STYLES.sur-font.font-size;
+  in-out property <bool> clip : true;
+  in-out property <brush> active-color : ROOT-STYLES.radio-active;
 }
 ```
-## DefaultSAvatarProps
 
-```rust
-export global DefaultSAvatarProps {
-  in-out property <length> card-height : avatar-size;
-  in-out property <length> card-width : avatar-size;
-  in-out property <PaddingType> padding-type: PaddingType.Normal;
-  in-out property <ShadowType> shadow-type: ShadowType.Low1;
-  in-out property <BorderType> border-type : Circle-Normal;
-  in-out property <length> avatar-size : ROOT-STYLES.sur-size.normal * 2;
-  in-out property <image> avatar;
-  in-out property <image> alt : UseIcons.icons.Avatar;
-  in-out property <ImageFit> image-fit : ImageFit.cover;
-}
-```
-## DefaultSBadgeProps
-```rust
-export global DefaultSBadgeProps {
-  //font
-  in-out property <int> font-weight : GlobalProps.font.font-weight;
-  in-out property <length> font-size: GlobalProps.font.font-size - 2px;
-  in-out property <brush> font-color : GlobalProps.font.color;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  //theme
-  in-out property <Themes> theme : GlobalProps.theme;
-  //hight-width
-  in-out property <length> card-height : font-size;
-  in-out property <length> card-width : font-size;
-  in-out property <string> text : "";
-  in-out property <image> icon : UseIcons.icons.Attention;
-  in-out property <Position> position : Position.RightTop;
-  in-out property <brush> icon-color : GlobalProps.font.color;
-}
-```
-## DefaultSButtonProps
-```rust
-export global DefaultSButtonProps {
-  //font
-  in-out property <int> font-weight : GlobalProps.font.font-weight;
-  in-out property <length> font-size: GlobalProps.font.font-size;
-  in-out property <brush> color : GlobalProps.font.color;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  //theme
-  in-out property <Themes> theme : GlobalProps.theme;
-  in property <PaddingType> padding-type:PaddingType.Normal;
-  in property <ShadowType> shadow-type: ShadowType.Low1;
-  in property <BorderType> border-type : BorderType.Normal;
-  in property <image> icon;
-  in property <bool> show-icon : false;
-  in-out property <string> text : "SButton";
-  in property <length> letter-spacing : GlobalProps.text-action.letter-spacing;
-  in property <bool> clip : GlobalProps.clip;
-  in property <bool> round : false;
-}
-```
-## DefaultSCardProps
-```rust
-export global DefaultSCardProps {
-  //font
-  in-out property <int> font-weight : GlobalProps.font.font-weight;
-  in-out property <length> font-size: GlobalProps.font.font-size;
-  in-out property <brush> font-color : GlobalProps.font.color;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  //theme
-  in-out property <Themes> theme : GlobalProps.theme;
-  //hight-width
-  in-out property <length> card-height : GlobalProps.standard-height;
-  in-out property <length> card-width : GlobalProps.standard-width;
-  in-out property <PaddingType> padding-type:PaddingType.Normal;
-  in-out property <ShadowType> shadow-type: ShadowType.Low1;
-  in-out property <BorderType> border-type : BorderType.Normal;
-  in-out property <bool> clip : GlobalProps.clip;
-}
-```
-## DefaultSCollapseProps
-```rust
-export global DefaultSCollapseProps {
-  //font
-  in-out property <int> font-weight : GlobalProps.font.font-weight;
-  in-out property <length> font-size: GlobalProps.font.font-size;
-  in-out property <brush> font-color : GlobalProps.font.color;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  //theme
-  in-out property <Themes> theme : GlobalProps.theme;
-  //header
-  in-out property <length> header-height : GlobalProps.font.font-size;
-  in-out property <string> header-title : "collapse";
-  in-out property <PaddingType> header-padding-type:PaddingType.Normal;
-  in-out property <ShadowType> header-shadow-type: ShadowType.Low1;
-  in-out property <BorderType> header-border-type : BorderType.Normal;
-  //details
-  in-out property <length> details-height : 120px;
-  in-out property <PaddingType> details-padding-type:PaddingType.Normal;
-  in-out property <ShadowType> details-shadow-type: ShadowType.Low1;
-  in-out property <BorderType> details-border-type : BorderType.Normal;
-  in-out property <bool> is-show : false;
-  in-out property <image> collapse-icon : UseIcons.icons.Right-one;
-}
-```
-## DefaultSCollectionProps
-```rust
-export global DefaultSCollectionProps {
-  in-out property <float> scale : 2;
-  in-out property <bool> is-scale : false;
-  in-out property <easing> easing : ease-in-out;
-  in-out property <duration> duration : 200ms;
-}
-```
-## DefaultSDialogProps
-```rust
-export global DefaultSDialogProps {
-  //theme
-  in-out property <Themes> theme : Dark;
-  in-out property <Themes> cancel-btn-theme : Info;
-  in-out property <Themes> confirm-btn-theme : Primary;
-  in-out property <string> cancel-btn-text : "Cancel";
-  in-out property <string> confirm-btn-text : "Confirm";
-  in-out property <bool> is-show:false;
-  in-out property <percent> mask-opacity : 80%;
-  in-out property <length> spacing : 16px;
-  //font
-  in-out property <int> font-weight : GlobalProps.font.font-weight;
-  in-out property <length> font-size: GlobalProps.font.font-size;
-  in-out property <brush> font-color : GlobalProps.font.color;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  //dialog
-  in-out property <Themes> dialog-theme : Dark;
-  in-out property <string> dialog-title : "Dialog Title";
-  in-out property <length> dialog-title-size : 18px;
-  in-out property <string> dialog-details : "This is a dialog info";
-  in-out property <float> dialog-height : 0.36;
-  in-out property <float> dialog-title-height : 0.2;
-  in-out property <float> dialog-view-height : 0.6;
-  in-out property <float> btn-view-height : 0.2;
-  in-out property <float> dialog-width : 0.6;
-  in-out property <length> dialog-details-padding-top : 0;
-  in-out property <length> dialog-details-padding-bottom : 0;
-  in-out property <length> dialog-details-padding-left : 0;
-  in-out property <length> dialog-details-padding-right : 0;
-  in-out property <LayoutAlignment> dialog-details-alignment : end;
-  in-out property <PaddingType> padding-type:PaddingType.Normal;
-  in-out property <ShadowType> shadow-type: ShadowType.Low1;
-  in-out property <BorderType> border-type : BorderType.Normal;
-}
-```
-## DefaultSDividerProps
-```rust
-export global DefaultSDividerProps {
-  //theme
-  in-out property <Themes> theme : GlobalProps.theme;
-  in-out property <length> height : 2px;
-  in-out property <length> width : 100%;
-  in-out property <PaddingType> padding-type:PaddingType.None;
-  in-out property <ShadowType> shadow-type: ShadowType.Low1;
-  in-out property <BorderType> border-type : BorderType.None;
-}
-```
-## DefaultSDrawerProps
-```rust
-export global DefaultSDrawerProps {
-  //theme
-  in-out property <Themes> theme : GlobalProps.theme;
-  in-out property <bool> is-show : false;
-  in-out property <percent> mask-opacity : 80%;
-  in-out property <PaddingType> padding-type:PaddingType.Normal;
-  in-out property <Themes> drawer-theme : Light;
-  in-out property <Position> position : Left;
-  in-out property <percent> proportion : 30%;
-}
-```
-## DefaultSFileProps
-```rust
-export global DefaultSFileProps {
-  //theme
-  in-out property <Themes> theme :GlobalProps.theme;
-  in-out property <[SOption]> tabs : [];
-  in-out property <[length]> column-width : [];
-  //tab
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  in-out property <int> font-weight : 700;
-  in-out property <length> font-size: GlobalProps.font.font-size;
-  in-out property <brush> font-color : GlobalProps.font.color;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  in-out property <PaddingType> padding-type:PaddingType.Normal;
-  in-out property <ShadowType> shadow-type: ShadowType.Low1;
-  in-out property <BorderType> border-type : BorderType.Normal;
-  in-out property <TextHorizontalAlignment> text-alignment: TextHorizontalAlignment.left;
-  // item
-  in-out property <[FileItem]> files : [];
-  in-out property <string> item-font-family : GlobalProps.font.font-family;
-  in-out property <int> item-font-weight : GlobalProps.font.font-weight;
-  in-out property <length> item-font-size: GlobalProps.font.font-size;
-  in-out property <bool> item-font-italic : GlobalProps.font.font-italic;
-  in-out property <PaddingType> item-padding-type:PaddingType.Normal;
-}
-```
-## DefaultSHeaderProps
-```rust
-export global DefaultSHeaderProps {
-  in-out property <length> spacing: 2px;
-  in-out property <image> source :UseIcons.icons.Right;
-  in-out property <[SOption]> options : [
-    {label:"src",value:"src"},
-    {label:"header",value:"header"},
-    {label:"SHeader",value:"SHeader"}
-  ];
-  in-out property <int> font-weight : GlobalProps.font.font-weight;
-  in-out property <length> font-size: GlobalProps.font.font-size;
-  in-out property <brush> font-color : GlobalProps.font.color;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  //theme
-  in-out property <Themes> theme : GlobalProps.theme;
-  //hight-width
-  in-out property <length> card-height : font-size;
-  in-out property <length> card-width : GlobalProps.standard-width;
-  in-out property <PaddingType> padding-type:PaddingType.Normal;
-  in-out property <ShadowType> shadow-type: ShadowType.Low1;
-  in-out property <BorderType> border-type : BorderType.Normal;
-}
-```
-## DefaultSIconProps
-```rust
-export global DefaultSIconProps {
-  in-out property <MouseCursor> mouse-cursor : MouseCursor.pointer;
-  in-out property <Themes> theme : GlobalProps.theme;
-  in-out property <length> height : GlobalProps.standard-icon-size;
-  in-out property <length> width : GlobalProps.standard-icon-size;
-  in-out property <length> padding : 0;
-  //image props
-  in-out property <image> source;
-  in-out property <brush> colorize;
-  in property <ImageFit> image-fit : ImageFit.contain;
-  in property <ImageRendering> image-rendering : ImageRendering.smooth;
-  in-out property <RotationProps> rotation : {
-    rotation-angle : 0,
-    rotation-origin-x : 0,
-    rotation-origin-y: 0,
-  };
-  in-out property <int> source-clip-x : 0;
-  in-out property <int> source-clip-y : 0;
-  in-out property <int> source-clip-height : 0;
-  in-out property <int> source-clip-width : 0;
-}
-```
-## DefaultSInputProps
-```rust
-export global DefaultSInputProps {
-  //font
-  in-out property <int> font-weight : GlobalProps.font.font-weight;
-  in-out property <length> font-size: GlobalProps.font.font-size;
-  in-out property <brush> font-color : GlobalProps.font.color;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  //theme
-  in-out property <Themes> theme : GlobalProps.theme;
-  //hight-width
-  in-out property <length> card-height : font-size;
-  in-out property <length> card-width : 18 * font-size;
-  in-out property <PaddingType> padding-type:PaddingType.Normal;
-  in-out property <ShadowType> shadow-type: ShadowType.Low1;
-  in-out property <BorderType> border-type : BorderType.Normal;
- 
-  in-out property <string> placeholder : "please input";
-  in-out property <bool> disabled:false;
-  in-out property <bool> clearable:false;
-  //use eye-icon
-  in-out property <bool> password:false;
-  in-out property <bool> has-focus:false;
-  in-out property <InputType> type : InputType.text;
-  in-out property <brush> icon-color;
-  in-out property <string> text :"";
-}
-```
-## DefaultSLinkProps
-```rust
-export global DefaultSLinkProps {
-  in-out property <image> icon : UseIcons.icons.Share;
-  in-out property <bool> funny :  false;
-  in-out property <bool> underline : true;
-  in-out property <MouseCursor> mouse-cursor : pointer;
-  in-out property <Themes> theme : GlobalProps.theme;
-  in-out property <length> font-size : GlobalProps.font.font-size;
-  in-out property <string> text:"";
-  in-out property <int> font-weight : 500;
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-}
-```
-## DefaultSLoadingProps
-```rust
-export global DefaultSLoadingProps {
-  in-out property <int> font-weight : GlobalProps.font.font-weight;
-  in-out property <length> font-size: GlobalProps.font.font-size;
-  in-out property <brush> font-color : GlobalProps.font.color;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  in-out property <float> opacity : 1;
-  in-out property <bool> is-show : false;
-  in-out property <Themes> theme : GlobalProps.theme;
-  in-out property <image> loading-icon : UseIcons.icons.Loading;
-  in-out property <duration> duration : 1200ms;
-  in-out property <string> text : "Loading ...";
-  in-out property <easing> easing : ease-in-out;
-  in-out property <int> iteration-count : -1;
-}
-```
-## DefaultSPersonaProps
-```rust
-export global DefaultSPersonaProps {
-  in-out property <string> btn-text : "Click";
-  in-out property <[SButtonProps]> btns : [];
-  in-out property <image> avatar : @image-url("");
-  in-out property <length> avatar-height:130px;
-  in-out property <Themes> avatar-theme : GlobalProps.theme;
-  in-out property <length> card-width : 200px;
-  in-out property <length> spacing : 8px;
-  //name
-  in-out property <string> name : "SYF20020816";
-  in-out property <length> name-height: GlobalProps.font.font-size * 3;
-  in-out property <length> name-font-size: GlobalProps.font.font-size + 2px;
-  in-out property <int> name-font-weight : 700;
-  in-out property <Themes> name-theme: GlobalProps.theme;
-  in-out property <string> name-font-family : GlobalProps.font.font-family;
-  in-out property <bool> name-font-italic : GlobalProps.font.font-italic;
-  //des
-  in-out property <string> des : @tr("A Rust | Vue Developer\nEmail:\nsyf20020816@outlook.com");
-  in-out property <length> des-height: des-font-size * 1.5 * 3;
-  in-out property <length> des-font-size: GlobalProps.font.font-size - 2px;
-  in-out property <int> des-font-weight : GlobalProps.font.font-weight;
-  in-out property <Themes> des-theme: GlobalProps.theme;
-  in-out property <string> des-font-family : GlobalProps.font.font-family;
-  in-out property <bool> des-font-italic : GlobalProps.font.font-italic;
-}
-```
-## DefaultSPopupProps
-```rust
-export global DefaultSPopupProps {
-  in-out property <bool> is-show : false;
-  in-out property <Themes> theme : GlobalProps.theme;
-  in-out property <percent> mask-opacity : 80%;
-}
-```
-## DefaultSProgressProps
-```rust
-export global DefaultSProgressProps {
-  //font
-  in-out property <int> font-weight : GlobalProps.font.font-weight;
-  in-out property <length> font-size: GlobalProps.font.font-size - 2px;
-  in-out property <brush> font-color : GlobalProps.font.color;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  //theme
-  in-out property <Themes> theme : GlobalProps.theme;
-  //hight-width
-  in-out property <length> height : 8px + font-size * 2;
-  in-out property <length> width : 100%;
-  in-out property <string> text : @tr("now: {}% used 100%" , progress);
-  in-out property <float> progress : 0;
-}
-```
-## DefaultSRadioProps
-```rust
-export global DefaultSRadioProps {
-  in-out property <int> font-weight : GlobalProps.font.font-weight;
-  in-out property <length> font-size: GlobalProps.font.font-size;
-  in-out property <brush> color : GlobalProps.font.color;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  in-out property <length> card-height : GlobalProps.font.font-size;
-  in-out property <length> card-width : GlobalProps.font.font-size;
-  in-out property <Themes> theme : GlobalProps.theme;
-  in-out property <brush> active-color: GlobalProps.active-color;
-  in-out property <PaddingType> padding-type: PaddingType.Icon;
-  in-out property <ShadowType> shadow-type: ShadowType.Low1;
-  in-out property <BorderType> border-type : BorderType.Small;
-  in-out property <string> text : "SRadio";
-  in-out property <string> value : "radio";
-  in-out property <bool> actived : false;
-}
-```
-## DefaultSResultProps
-```rust
-export global DefaultSResultProps {
-  in-out property <length> card-height : 200px;
-  in-out property <length> card-width : 140px;
-  in-out property <length> icon-size : 48px;
-  in-out property <[SButtonProps]> btns : [];
-  in-out property <string> btn-text : "CLICK!";
-  in-out property <ResultType> result-type:ResultType.Success;
-  in-out property <string> text : "This is a success message!";
-  in-out property <PaddingType> padding-type: PaddingType.Normal;
-  in-out property <ShadowType> shadow-type: ShadowType.Low1;
-  in-out property <BorderType> border-type : BorderType.Normal;
-  in-out property <image> icon : UseIcons.icons.Success;
-  in-out property <Themes> theme : Success;
-  in-out property <int> font-weight : GlobalProps.font.font-weight;
-  in-out property <length> font-size: GlobalProps.font.font-size;
-  in-out property <brush> color : ROOT-STYLES.sur-theme-colors.success.font;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  in-out property <string> font-family : GlobalProps.font.font-family;
-}
-```
-## DefaultSSelectProps
-```rust
-export global DefaultSSelectProps {
-  //font
-  in-out property <int> font-weight : GlobalProps.font.font-weight;
-  in-out property <length> font-size: GlobalProps.font.font-size;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  in-out property <int> item-font-weight : GlobalProps.font.font-weight;
-  in-out property <length> item-font-size: GlobalProps.font.font-size;
-  in-out property <bool> item-font-italic : GlobalProps.font.font-italic;
-  in-out property <string> item-font-family : GlobalProps.font.font-family;
-  //theme
-  in-out property <Themes> theme : GlobalProps.theme;
-  //hight-width
-  in-out property <length> card-height : font-size;
-  in-out property <length> card-width : 180px;
-  in-out property <PaddingType> padding-type:PaddingType.Normal;
-  in-out property <ShadowType> shadow-type: ShadowType.Low1;
-  in-out property <BorderType> border-type : BorderType.Normal;
-  in-out property <[SOption]> options;
-  in-out property <string> placeholder : "please select";
-  in-out property <bool> is-show : false;
-}
-```
-## DefaultSSwitchProps
-```rust
-export global DefaultSSwitchProps {
-  //container
-  in-out property <length> card-height : 6px;
-  in-out property <length> card-width : 24px;
-  in-out property <PaddingType> padding-type: PaddingType.Normal;
-  in-out property <ShadowType> shadow-type: ShadowType.Low1;
-  in-out property <BorderType> border-type : BorderType.Small;
-  in-out property <bool> active : false;
-  in-out property <Themes> theme:GlobalProps.theme;
-  //switch-circle
-  in-out property <length> switch-height : 6px + ROOT-STYLES.sur-padding.normal.padding-same;
-  in-out property <length> switch-width : 6px + ROOT-STYLES.sur-padding.normal.padding-same;
-  in-out property <PaddingType> switch-padding-type: PaddingType.None;
-  in-out property <ShadowType> switch-shadow-type: ShadowType.Low1;
-  in-out property <BorderType> switch-border-type : Normal;
-  in-out property <brush> switch-background-color : ROOT-STYLES.sur-theme-colors.dark.deepest;
-  in-out property <brush> switch-border-color : ROOT-STYLES.sur-theme-colors.dark.deepest;
-  in-out property <color> switch-drop-shadow-color : ROOT-STYLES.sur-theme-colors.dark.weakest;
-}
-```
-## DefaultSSwitchGroupProps
-```rust
-export global DefaultSSwitchGroupProps {
-  in-out property <Themes> theme:GlobalProps.theme;
-  in-out property <length> card-height : self.font-size / 2;
-  in-out property <length> card-width : 140px;
-  in-out property <PaddingType> padding-type: PaddingType.Normal;
-  in-out property <ShadowType> shadow-type: ShadowType.Low1;
-  in-out property <BorderType> border-type : BorderType.None;
-  in-out property <string> active ;
-  in-out property <[SOption]> switchs : [];
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  in-out property <int> font-weight : GlobalProps.font.font-weight;
-  in-out property <length> font-size: 14px;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-}
-```
-## DefaultSTableProps
-```rust
-export global DefaultSTableProps {
-  //theme
-  in-out property <Themes> theme :GlobalProps.theme;
-  in-out property <[SOption]> columns : [];
-  in-out property <[length]> column-width : [];
-  in-out property <[Themes]> column-themes:[];
-  in-out property <length> viewport-height;
-  //tab
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  in-out property <int> font-weight : 700;
-  in-out property <length> font-size: GlobalProps.font.font-size;
-  in-out property <brush> font-color : GlobalProps.font.color;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  in-out property <PaddingType> padding-type:PaddingType.Normal;
-  in-out property <ShadowType> shadow-type: ShadowType.Low1;
-  in-out property <BorderType> border-type : BorderType.None;
-  in-out property <TextHorizontalAlignment> alignment: TextHorizontalAlignment.left;
-}
-```
-## DefaultSTableColumnProps
-```rust
-export global DefaultSTableColumnProps {
-  //theme
-  in-out property <Themes> theme :GlobalProps.theme;
-  in-out property <int> index;
-  in-out property <[string]> datas;
-  in-out property <length> height;
-  in-out property <length> width;
-  //tab
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  in-out property <int> font-weight : GlobalProps.font.font-weight;
-  in-out property <length> font-size: GlobalProps.font.font-size;
-  in-out property <brush> font-color : GlobalProps.font.color;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  in-out property <PaddingType> padding-type:PaddingType.Normal;
-  in-out property <ShadowType> shadow-type: ShadowType.Low1;
-  in-out property <BorderType> border-type : BorderType.None;
-  in-out property <TextHorizontalAlignment> alignment: TextHorizontalAlignment.left;
-}
-```
-## DefaultSTagProps
-```rust
-export global DefaultSTagProps {
-  in-out property <string> text : "";
-  in property <length> font-size : ROOT-STYLES.tag-size;
-  in-out property <int> font-weight : GlobalProps.font.font-weight;
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  in-out property <PaddingType> padding-type : PaddingType.Tag;
-  in-out property <BorderType> border-type : BorderType.Normal;
-  in-out property <ShadowType> shadow-type : ShadowType.Low1;
-  in-out property <Themes> theme : GlobalProps.theme;
-}
-```
-## DefaultSTextProps
-```rust
-export global DefaultSTextProps {
-  //font
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  in-out property <int> font-weight : GlobalProps.font.font-weight;
-  in-out property <length> font-size: GlobalProps.font.font-size;
-  in-out property <brush> color : GlobalProps.font.color;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  //theme
-  in-out property <Themes> theme : GlobalProps.theme;
-  in-out property <TextWrap> wrap :GlobalProps.text-action.wrap;
-  in-out property <TextOverflow> overflow : GlobalProps.text-action.overflow;
-  in-out property <length> letter-spacing : GlobalProps.text-action.letter-spacing;
-  in-out property <TextHorizontalAlignment> horizontal-alignment : GlobalProps.text-alignment.horizontal-alignment;
-  in-out property <TextVerticalAlignment> vertical-alignment : GlobalProps.text-alignment.vertical-alignment;
-}
-```
-## DefaultSTipProps
-```rust
-export global DefaultSTipProps {
-  //font
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  in-out property <int> font-weight : GlobalProps.font.font-weight;
-  in-out property <length> font-size: GlobalProps.font.font-size;
-  in-out property <brush> font-color : GlobalProps.font.color;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  //theme
-  in-out property <Themes> theme : GlobalProps.theme;
-  in-out property <TextWrap> wrap :word-wrap;
-  in-out property <TextOverflow> overflow : GlobalProps.text-action.overflow;
-  in-out property <length> letter-spacing : GlobalProps.text-action.letter-spacing;
-  in-out property <TextHorizontalAlignment> horizontal-alignment : GlobalProps.text-alignment.horizontal-alignment;
-  in-out property <TextVerticalAlignment> vertical-alignment : GlobalProps.text-alignment.vertical-alignment;
-  in-out property <Position> position : Top;
-  in-out property <bool> is-show : false;
-  in-out property <string> text : "default tips";
-  in-out property <length> tip-width : 0;
-}
-```
-## DefaultSTreeProps
-```rust
-export global DefaultSTreeProps {
-  //font
-  in-out property <string> font-family : GlobalProps.font.font-family;
-  in-out property <int> font-weight : 700;
-  in-out property <length> font-size: GlobalProps.font.font-size;
-  in-out property <bool> font-italic : GlobalProps.font.font-italic;
-  //font
-  in-out property <string> item-font-family : GlobalProps.font.font-family;
-  in-out property <int> item-font-weight : GlobalProps.font.font-weight;
-  in-out property <length> item-font-size: GlobalProps.font.font-size - 2px;
-  in-out property <bool> item-font-italic : GlobalProps.font.font-italic;
-  //theme
-  in-out property <Themes> theme : GlobalProps.theme;
-  //hight-width
-  in-out property <length> height : 100%;
-  in-out property <length> width : 100%;
-  in-out property <PaddingType> padding-type:PaddingType.Normal;
-  in-out property <ShadowType> shadow-type: ShadowType.Low1;
-  in-out property <BorderType> border-type : BorderType.Normal;
-  in-out property <TreeData> tree-data : {
-    icon : UseIcons.icons.Folder,
-    label: "parent_folder",
-    extra:"",
-    children:[
-      {
-        icon:UseIcons.icons.FileCode,
-        label:"slint.slint",
-        extra:"12KB", 
-      },
-      {
-        icon:UseIcons.icons.FileCode,
-        label:"surrealism.slint",
-        extra:"126KB", 
-      }
-    ]
-  };
-}
-```
+## UseIcons (Global)
+
+a quicker way to use SurrealismUI built in icons
+
+- icons

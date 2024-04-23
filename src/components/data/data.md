@@ -17,3 +17,4 @@
 |SKeyBoard(虚拟键盘)|A customizable keyboard component for various input types including numbers, alphabets, and computer keyboard layouts.|
 |SCarousel(走马灯)|The Carousel component is designed to display a sequence of images (or slides) that users can navigate through. It provides a dynamic and visually engaging way to showcase multiple images without occupying too much space on the screen.|
 |STimeLine(时间轴)|The timeline component is mainly used to display the changes of data over time, and it is usually used in data visualization to visually represent time series data|
+|SCalendar(日历)|A calendar component that inherits from SCard. It is designed to display a month view with the ability to navigate and select dates.|

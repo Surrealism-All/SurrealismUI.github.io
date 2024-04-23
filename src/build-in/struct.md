@@ -23,6 +23,17 @@
 - deepest (brush) : deepest color
 - font (brush) : font color
 - opacity (brush) : opacity color
+### ColorLevel
+- Weakest
+- Weaker
+- Normal
+- Deeper
+- Deepest
+- Font
+- Opacity
+## UseIcons (Global)
+a quicker way to use SurrealismUI built in icons
+- icons
 ## ThemePadding
 - none (PaddingProps) : theme padding none
 - tip (PaddingProps) : theme padding tip
@@ -88,6 +99,61 @@
 - len480 (length) : spacing when width == 480px
 - len520 (length) : spacing when width == 520px
 - len560 (length) : spacing when width == 560px
+  
+## SOption
+```rust
+export struct SOption {label:string,value:string}
+```
+
+## ResultType
+```rust
+export enum ResultType{
+  Primary,
+  Success,
+  Info,
+  Error,
+  Warning,
+  Help
+}
+```
+
+## Position
+```rust
+export enum Position {
+  Left,
+  LeftTop,
+  LeftBottom,
+  Right,
+  RightTop,
+  RightBottom,
+  Top,
+  TopLeft,
+  TopRight,
+  Bottom,
+  BottomLeft,
+  BottomRight
+}
+```
+## SDate
+```rust
+export struct SDate{
+    year: int,
+    month: int,
+    day: int,
+    hour: int,
+    minute: int,
+    second: int,
+}
+```
+## SStepOption
+```rust
+export struct SStepOption {
+  label: string,
+  value: string,
+  info: string,
+}
+```
+---
 
 ## SAlertProps
 ```rust
@@ -161,6 +227,36 @@ export struct SButtonProps {
   round : bool
 }
 ```
+
+## SCalendarProps
+```rust
+export struct SCalendarProps {
+    //font
+    font-weight : int,
+    font-size: length,
+    font-color : brush,
+    font-italic : bool,
+    font-family : string,
+    //theme
+    theme : Themes,
+    //hight-width
+    card-height : length,
+    card-width : length,
+    padding-type: PaddingType,
+    shadow-type: ShadowType,
+    border-type : BorderType,
+    clip : bool,
+    today: SDate,
+    // zeller algorithm
+    // https://en.wikipedia.org/wiki/Zeller%27s_congruence
+    bg-visible : bool,
+    active-date: SDate,
+    current-date: SDate,
+    months: [string],
+    weekdays :[string],
+  }
+```
+
 ## SCardProps
 ```rust
 export struct SCardProps {
@@ -181,6 +277,7 @@ export struct SCardProps {
   clip : bool,
 }
 ```
+
 ## SCollapseProps
 ```rust
 export struct SCollapseProps {
@@ -207,6 +304,41 @@ export struct SCollapseProps {
   collapse-icon : image,
 }
 ```
+## SCarouselProps
+```rust
+export struct SCarouselProps {
+    sources: [image],
+    fold-strench: float,
+    fold-width: length,
+    fold-height: length,
+    fit: ImageFit,
+    focus-main: bool,
+    active: int,
+}
+```
+
+## SCheckboxProps
+```rust
+export struct SCheckboxProps {
+  font-weight : int,
+  font-size: length,
+  color : brush,
+  font-italic : bool,
+  font-family : string,
+  card-height : length,
+  card-width : length,
+  theme : Themes,
+  active-color: brush,
+  padding-type: PaddingType,
+  shadow-type: ShadowType,
+  border-type : BorderType,
+  text : string,
+  value : string,
+  actived : bool,
+  disabled : bool,
+}
+```
+
 ## SCollectionProps
 ```rust
 export struct SCollectionProps {
@@ -418,6 +550,29 @@ export struct SInputProps {
   text : string,
 }
 ```
+## KeyBoardType
+```rust
+export enum KeyBoardType {
+    PhoneAlpha,
+    PhoneNumber,
+    Computer,
+}
+```
+## SKeyItem
+```rust
+export struct SKeyItem {
+    label: string,
+    value: KeyItems
+}
+```
+## SKeyBoardProps
+```rust
+export struct SKeyBoardProps {
+    theme: Themes,
+    font-size:length,
+    keyboard-type: KeyBoardType,
+}
+```
 ## SLinkProps
 ```rust
 export struct SLinkProps {
@@ -434,7 +589,7 @@ export struct SLinkProps {
 }
 ```
 ## SLoadingProps
-```
+```rust
 export struct SLoadingProps {
   font-weight : int,
   font-size: length,
@@ -451,6 +606,74 @@ export struct SLoadingProps {
   iteration-count : int,
 }
 ```
+## MenuData
+
+```rust
+export struct MenuData {
+  id:string,
+  icon : image,
+  name : string,
+}
+```
+## SMenuProps
+```rust
+export struct SMenuProps {
+  theme : Themes,
+  height : length,
+  width :length,
+  tip-width: length,
+  icon-box-size : length,
+  icon-size : length ,
+  active : string,
+  active-color : brush,
+  menu-data : [MenuData],
+  sub-menu-data : [MenuData],
+  more-height : length, 
+  more-width : length,
+}
+```
+## SNumberInputProps
+```rust
+export struct SNumberInputProps {
+  //font
+  font-weight : int,
+  font-size: length,
+  font-color : brush,
+  font-italic : bool,
+  font-family : string,
+  //theme
+  theme : Themes,
+  //hight-width
+  card-height : length,
+  card-width : length,
+  padding-type: PaddingType,
+  shadow-type: ShadowType,
+  border-type : BorderType,
+  clip : bool,
+  minimum: float,
+  maximum: float,
+  value: float,
+  disabled : bool,
+  step : float,
+  strict : bool,
+  input-type : InputType,
+}
+```
+
+## SPaginationProps
+```rust
+export struct SPaginationProps {
+    theme: Themes,
+    active: int,
+    page-size: int,
+    total: int,
+    pre-icon: image,
+    next-icon: image,
+    size: length,
+    visible-range: int,
+}
+```
+
 ## SPersonaProps
 ```rust
 export struct SPersonaProps {
@@ -480,6 +703,17 @@ export struct SPersonaProps {
   des-font-italic: bool,
 }
 ```
+## SPopoverProps
+```rust
+export struct SPopoverProps {
+  theme : Themes,
+  position : Position,
+  is-show : bool,
+  owner-height:length,
+  owner-width:length
+}
+```
+
 ## SPopupProps
 ```rust
 export struct SPopupProps {
@@ -524,6 +758,7 @@ export struct SRadioProps {
   text : string,
   value : string,
   actived : bool,
+  disabled: bool,
 }
 ```
 ## SResultProps
@@ -568,10 +803,24 @@ export struct SSelectProps {
   is-show : bool,
 }
 ```
-## SOption
+
+## SStepProps
 ```rust
-export struct SOption {label:string,value:string}
+export struct SStepProps {
+  theme : Themes,
+  font-family : string,
+  font-weight : int,
+  font-size: length,
+  font-color : brush,
+  font-italic : bool,
+  active: int,
+  active-color: brush,
+  done-color: brush,
+  undone-color: brush,
+  options : [SStepOption],
+}
 ```
+
 ## SSwitchProps
 ```rust
 export struct SSwitchProps {
@@ -727,5 +976,16 @@ export struct STreeProps {
   shadow-type: ShadowType,
   border-type : BorderType,
   tree-data : TreeData
+}
+```
+## STimeLineProps
+```rust
+export struct STimeLineProps {
+    id: string,
+    theme: Themes,
+    date: string,
+    header-alignment: TextHorizontalAlignment,
+    font-size: length,
+    active: bool,
 }
 ```

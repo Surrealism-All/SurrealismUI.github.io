@@ -1,11 +1,24 @@
 # Updates
+- V0.4.3
+  - 中文
+    - 增加`SNumInput`数字输入
+    - 增加`SCalendar`时间日期
+    - 修复`SAvatar`None异常
+    - 修复`SMenu`callback change
+  - English
+    - Add `SNumInput` 
+    - Add `SCalendar`
+    - Fix `SAvatar` None Option unwrap
+    - Fix `SMenu`callback change
 - V0.4.2
   - 中文
     - 增加`SCarousel`走马灯
     - 增加`STimeLine`时间轴
+    - 修复`SCheckbox`和`SRadio`布局异常
   - English
     - Add `SCarousel`
     - Add `STimeLine`
+    - Fix layout error in `SCheckbox`and`SRadio`
 - V0.4.1
   - 中文
     - 增加`SStep`进度指向线颜色效果

@@ -27,6 +27,9 @@
 |SStep(步骤组件)|The Step component visualizes the progress of a sequence by breaking it down into individual steps. It allows for custom theming and supports indicating the current, completed, and pending steps through visual cues.|
 |SPagination(分页器)|A component designed for navigating through pages, providing options for customization and various interactions.|
 |SKeyBoard(虚拟键盘)|A customizable keyboard component for various input types including numbers, alphabets, and computer keyboard layouts.|
+|SCarousel(走马灯)|The Carousel component is designed to display a sequence of images (or slides) that users can navigate through. It provides a dynamic and visually engaging way to showcase multiple images without occupying too much space on the screen.|
+|STimeLine(时间轴)|The timeline component is mainly used to display the changes of data over time, and it is usually used in data visualization to visually represent time series data|
+|SCalendar(日历)|A calendar component that inherits from SCard. It is designed to display a month view with the ability to navigate and select dates.|
 
 ## Form Components
 
@@ -37,9 +40,10 @@
 |SSelect(选择框组件)|SSelect is a selector that provides three types of optional input parameter values|
 |SLink(链接组件)|SLink is commonly used to represent text connections or sharing|
 |SRadio(单选框组件)|SRadio let people select a single item|
+|SCheckbox(多选框组件)|SCheckbox let people select multi items|
 |SSwitch(选项组件)|SSwitch is a switch used for simple judgment scenarios|
 |SSwitchGroup(选项组组件)|SSwitchGroup switch group can contain more switch cases|
-
+|SNumberInput(数字选择器)|A numeric input component that inherits from SCard, designed for inputting numerical values within a specified range. It allows adjustments through increment and decrement actions.|
 ## Nav Components
 
 |name|description|

@@ -2,7 +2,7 @@
 
 <p style="color: #FB3746;font-weight: 700;">
 If you use Cargo-Generate to build your project, you can skip this!<br>
-Cargo Generate is a recommand way!
+Cargo Generate is a recommend way!
 </p>
 
 ## Config SurrealismUI as Library (optional)

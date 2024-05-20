@@ -860,6 +860,31 @@ export struct SSwitchGroupProps {
   font-italic : bool,
 }
 ```
+## STabbarProps
+```rust
+export struct STabbarProps {
+    //font
+    font-weight: int,
+    font-size: length,
+    font-color : brush,
+    font-italic : bool,
+    font-family : string,
+    //theme
+    theme : Themes,
+    //hight-width
+    card-height : length,
+    card-width : length,
+    padding-type: PaddingType,
+    shadow-type: ShadowType,
+    border-type : BorderType,
+    clip : bool,
+    tabs: [MenuData],
+    icon-scale: float,
+    tab-size: length,
+    active: int,
+    show-text:bool,
+}
+```
 ## STableProps
 ```rust
 export struct STableProps {

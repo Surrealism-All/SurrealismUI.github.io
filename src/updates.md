@@ -1,4 +1,11 @@
 # Updates
+- V0.4.4
+  - 中文
+    - 增加`STabbar`
+    - `STag`增加hover
+  - English
+    - Add `STabbar`
+    - Add hover to `STag`
 - V0.4.3
   - 中文
     - 增加`SNumInput`数字输入

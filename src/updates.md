@@ -1,4 +1,23 @@
 # Updates
+- V0.4.5
+  - 中文
+    - 增加`SCatalog`目录
+    - 优化`SSwitch`动画
+    - 增加`SSelect` `active`
+    - 增加`SSlider`滑块
+    - 增加`STabbar`文档
+    - 修改`SAlert`中`Info`主题文字颜色
+    - 优化`SNumberInput`严格模式
+    - 修复`SSlider, SInput` `init` 回调崩溃
+  - English
+    - Add `SCatalog`
+    - Optimize `SSwitch` animation
+    - Add `SSelect` property `active`
+    - Add `SSlider` widget
+    - Add `STabbar` document
+    - fix `SAlert` `info` theme font color
+    - Optimize `SNumberInput` strict mode
+    - Fix `SSlider, SInput` `init` callback crash
 - V0.4.4
   - 中文
     - 增加`STabbar`

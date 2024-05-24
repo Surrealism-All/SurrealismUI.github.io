@@ -22,6 +22,7 @@
 |SPersona(个人信息组件)|This component is used to display simple user introduction information|
 |SBadge(勋章组件)|SBadge is a quick way to display user status or events|
 |SProgress(进度条组件)|SProgress is commonly used to display download progress or event processing progress.And you can fully control it through the progress property|
+|SSlider(滑块组件)| The Slider component is used for creating a slider control that allows users to select a value within a range. It supports customization of orientation, theme, and visual properties.|
 |STree(树型组件)|STree can be used to display directory structure, forming a parent-child relationship, and can be easily displayed|
 |SFile(文件组件)|SFile can help users present file selectors GUI|
 |SStep(步骤组件)|The Step component visualizes the progress of a sequence by breaking it down into individual steps. It allows for custom theming and supports indicating the current, completed, and pending steps through visual cues.|
@@ -44,6 +45,7 @@
 |SSwitch(选项组件)|SSwitch is a switch used for simple judgment scenarios|
 |SSwitchGroup(选项组组件)|SSwitchGroup switch group can contain more switch cases|
 |SNumberInput(数字选择器)|A numeric input component that inherits from SCard, designed for inputting numerical values within a specified range. It allows adjustments through increment and decrement actions.|
+
 ## Nav Components
 
 |name|description|
@@ -52,6 +54,7 @@
 |SMenu(菜单组件)|SMenu is a menu bar located on the left side that you can quickly generate through the menu-data property|
 |STab(标签页组件)|provide tab functionality, so that users can switch between different content sections|
 |STabbar(底部导航栏组件)|provide bottom operation bar for page switching|
+|SCatalog(目录组件)|The Catalog component is used to display a series of catalog items, each of which can contain labels and icons, and has click interaction functionality|
 
 ## Feedback Components
 

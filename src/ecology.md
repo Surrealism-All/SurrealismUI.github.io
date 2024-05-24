@@ -13,6 +13,10 @@
 
 - [slint_learn](https://github.com/syf20020816/slint_learn): Help everyone quickly learn Slint
 
+## Video for SurrealismUI
+
+[video url](https://www.bilibili.com/video/BV14U411f7LX/)
+
 ## Video for Slint Learn
 
 - [Easy](https://www.bilibili.com/video/BV1r14y1k7T5/?spm_id_from=333.999.0.0&vd_source=9c2ae08297163e79152407c969f04717)

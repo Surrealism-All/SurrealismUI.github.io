@@ -50,3 +50,5 @@
 - `SNumberInput`：A numeric input component that inherits from SCard, designed for inputting numerical values within a specified range. It allows adjustments through increment and decrement actions.
 - `SCalendar`：A calendar component that inherits from SCard. It is designed to display a month view with the ability to navigate and select dates.
 - `STabbar`: provide bottom operation bar for page switching
+- `SSlider`: The Slider component is used for creating a slider control that allows users to select a value within a range. It supports customization of orientation, theme, and visual properties.
+- `SCatalog`: The Catalog component is used to display a series of catalog items, each of which can contain labels and icons, and has click interaction functionality.

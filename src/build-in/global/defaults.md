@@ -878,3 +878,34 @@ export global DefaultSTreeProps {
   };
 }
 ```
+
+## DefaultSCatalogProps
+
+```rust
+export global DefaultSCatalogProps {
+    in property <PaddingType> padding-type: PaddingType.Normal;
+    in property <Themes> theme: GlobalProps.theme;
+    in property <[CatalogItem]> items;
+    in property <length> font-size: GlobalProps.font.font-size;
+    in property <int> font-wight: GlobalProps.font.font-weight;
+    in property <string> font-family: GlobalProps.font.font-family;
+    in property <bool> font-italic: GlobalProps.font.font-italic;
+    in property <length> spacing;
+    in property <brush> active-color;
+    out property <length> real-height: items.length * root.item-height;
+    in-out property <length> item-height;
+}
+```
+
+## DefaultSSliderProps
+
+```rust
+export global DefaultSSliderProps {
+    in property <Orientation> orientation: Orientation.horizontal;
+    in property <Themes> theme :DefaultSProgressProps.theme;
+    in-out property <float> progress : 0;
+    in-out property <length> stroke-width: DefaultSProgressProps.stroke-width;
+    in-out property <brush> stroke-color: UseSurrealismFn.get-color(root.theme, ColorLevel.Normal);
+    in property <length> border-radius: 6px;
+}
+```

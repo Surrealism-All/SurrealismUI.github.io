@@ -1014,3 +1014,47 @@ export struct STimeLineProps {
     active: bool,
 }
 ```
+
+## SSliderProps
+
+```rust
+export struct SSliderProps {
+    orientation: Orientation,
+    theme :Themes,
+    progress : float,
+    stroke-width: length,
+    stroke-color: brush,
+    border-radius: length,
+}
+```
+
+## SCatalogProps
+```rust
+export struct SCatalogProps {
+    padding-type: PaddingType,
+    theme: Themes,
+    items: [CatalogItem],
+    font-size: length,
+    font-wight: int,
+    font-family: string,
+    font-italic: bool,
+    spacing: length,
+    active-color: brush,
+    real-height: length,
+    item-height: length,
+}
+```
+
+### CatalogItem
+```rust
+export struct CatalogItem {
+    left-icon: image,
+    show-left-icon: bool,
+    label: string,
+    show-label: bool,
+    value: string,
+    right-icon: image,
+    show-right-icon: bool,
+    align: LayoutAlignment,
+}
+```

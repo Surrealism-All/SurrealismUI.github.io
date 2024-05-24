@@ -6,20 +6,20 @@ you can add anything you want to the card
 ![](../../static/card.png)
 
 ## properties inherits Rectangle
-- in property <Themes> theme : Surrealism theme;
-- in property <length> card-height: card height (not contain padding);
-- in property <length> card-width: card width (not contain padding);
-- in property <PaddingType> padding-type : padding type;
-- in property <ShadowType> shadow-type : shadow type;
-- in property <BorderType> border-type : border type;
-- in property <int> font-weight : font weight;
-- in property <length> font-size: font size;
-- in property <brush> font-color : font color;
-- in property <bool> font-italic : font italic;
-- in property <string> font-family : font family;
-- in-out property <PaddingProps> card-padding : inner card padding struct;
-- in-out property <BorderProps> card-border : inner card border struct;
-- in-out property <ShadowProps> card-shadow : inner card shadow struct;
+- `in property <Themes> theme` : Surrealism theme;
+- `in property <length> card-height`: card height (not contain padding);
+- `in property <length> card-width`: card width (not contain padding);
+- `in property <PaddingType> padding-type` : padding type;
+- `in property <ShadowType> shadow-type` : shadow type;
+- `in property <BorderType> border-type` : border type;
+- `in property <int> font-weight` : font weight;
+- `in property <length> font-size`: font size;
+- `in property <brush> font-color` : font color;
+- `in property <bool> font-italic` : font italic;
+- `in property <string> font-family` : font family;
+- `in-out property <PaddingProps> card-padding` : inner card padding struct;
+- `in-out property <BorderProps> card-border` : inner card border struct;
+- `in-out property <ShadowProps> card-shadow` : inner card shadow struct;
 ## example
 
 ```rust

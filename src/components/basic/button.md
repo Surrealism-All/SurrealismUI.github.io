@@ -6,19 +6,19 @@ SButton is a button component that you can freely perform regular properties ope
 
 ## properties inherits SCard
 
-- in property <image> icon : button icon in the left;
-- in property <bool> show-icon : show icon or not;
-- out property <bool> has-hover : hover button or not;
-- in-out property <string> text : text display in button;
-- in property <length> letter-spacing : text letter-spacing;
-- in property <bool> round  : button is round or not;
-- in-out property <bool> disabled : disabled to click
+- `in property <image> icon` : button icon in the left;
+- `in property <bool> show-icon` : show icon or not;
+- `out property <bool> has-hover` : hover button or not;
+- `in-out property <string> text` : text display in button;
+- `in property <length> letter-spacing` : text letter-spacing;
+- `in property <bool> round` : button is round or not;
+- `in-out property <bool> disabled` : disabled to click
 
 ## functions
 
 ## callbacks 
 
-- clicked : run if you click the button
+- `clicked` : run if you click the button
 
 ## example
 

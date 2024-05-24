@@ -8,14 +8,14 @@ It can display text , SText inherits Text and add theme property
 
 ## properties inherits Text
 
-- in property <Themes> theme : Surrealism themes
+- `in property <Themes> theme` : Surrealism themes
 
 ## callbacks: 
 
 ## functions:
 
-- pure public function get()->string : get content
-- public function set(content:string) : set content
+- `pure public function get()->string` : get content
+- `public function set(content:string)` : set content
 
 ## example
 

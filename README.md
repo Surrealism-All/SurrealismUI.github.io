@@ -1,11 +1,11 @@
-<img src="https://img.shields.io/badge/SurrealismUI-0.4.5-orange?style=for-the-badge&logo=rust&logoColor=%23fff&labelColor=%23DEA584&color=%23DEA584"> <img src="https://img.shields.io/badge/License-MIT-orange?style=for-the-badge&logoColor=%23fff&labelColor=%2323B898&color=%2323B898">
+<img src="https://img.shields.io/badge/SurrealismUI-0.5.2-orange?style=for-the-badge&logo=rust&logoColor=%23fff&labelColor=%23DEA584&color=%23DEA584"> <img src="https://img.shields.io/badge/License-MIT-orange?style=for-the-badge&logoColor=%23fff&labelColor=%2323B898&color=%2323B898">
 
 # SurrealismUI
 
 - author：syf20020816@outlook.com
 - createDate：20230908
-- updateDate：20240526
-- version：0.4.5
+- updateDate：20241208
+- version：0.5.2
 - email：syf20020816@outlook.com
 - discord：[Surrealism-UI](https://discord.gg/KSQqrSMCnU)
 

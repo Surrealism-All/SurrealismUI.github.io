@@ -78,6 +78,6 @@
       - [Step3-2: Tabbar](./examples/outlook/step/tabbar.md)
       - [Step3-3: Content Header](./examples/outlook/step/content_header.md)
       - [Step3-4: Content](./examples/outlook/step/content.md)
-      - [Step3-5: Bottom Btn](./examples/outlook/step/bottom_btn.md)
+      - [Step3-5: SideDrawer](./examples/outlook/step/bottom_btn.md)
     - [Step4: App](./examples/outlook/step/4.md)
 - [Updates](./updates.md)

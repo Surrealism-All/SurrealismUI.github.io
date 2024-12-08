@@ -12,18 +12,17 @@ component TestMenu inherits Window {
     height: 600px;
     width: 300px;
     Rectangle {
-      x: 0;
+      x: 1px;
       y: 0;
       height:parent.height;
       width: menu.width;
+     
       menu:=SMenu {
+        more-width :180px;
         theme: Dark;
         change(index,item)=>{
           debug(index);
           debug(item);
-        }
-        clicked-account()=>{
-          debug("clicked account");
         }
       }
     }
@@ -37,5 +36,7 @@ component TestMenu inherits Window {
 - private property <brush> hover-icon-color : menu item icon color changed when hover
 ## callbacks
 - callback change(int,MenuData) : run if you click menu item
-- callback clicked-account() : run if you click account icon
-- callback clicked-setting() : run if you click setting icon
+
+> [!NOTE]
+> 
+> drop callback: `clicked-account` and `clicked-setting`
